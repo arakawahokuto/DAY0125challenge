@@ -1,0 +1,337 @@
+body{
+    width: 100%;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.mainvisual{
+    height: 100vh;
+    background-image: url("./img/IMG_5593.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.mainvisual::before{
+    background: inherit;
+    content: '';
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+}
+
+.header{
+    position: absolute;
+    color: white;
+    right: 4%;
+}
+
+.header ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.header li{
+    margin-left: 20px;
+}
+
+.header a{
+    color: white;
+}
+
+.button{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+li:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-title h1{
+    color: white;
+    position: absolute;
+    font-size: 100px;
+    font-weight: lighter;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    animation-name: fadeinAnime;
+    animation-fill-mode: forwards;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+}
+
+@keyframes fadeinAnime{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+main h2{
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    padding: 0 25px 10px 45px;
+}
+
+main h2::before{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px rgb(124, 123, 123);
+}
+
+main h2::after{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px rgb(124, 123, 123);
+}
+
+main{
+    color: rgba(36, 35, 35, 0.5);
+}
+
+
+.inner{
+    width: 100%;
+    display: flex;
+    line-height: 20px;
+}
+
+.inner h3{
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+.left{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.about{
+    margin: 100px auto;
+    width: 80%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-img img{
+    width: 300px;
+    margin-right: 50px;
+    border-radius: 50px 50px 0 50px;
+}
+
+.text dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text dt{
+    width: 40%;
+    padding: 10px 0;
+}
+
+.text dd{
+    width: 60%;
+    padding: 10px 0;
+}
+
+.hobby{
+    width: 80%;
+}
+
+.item2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2{
+    margin-bottom: 100px;
+}
+
+.item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.item img{
+    width: 466.66px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.surf{
+    margin-left: 20px;
+}
+
+.right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.right-loop{
+    width: 356.69px;
+    height: 1400px;
+    overflow: hidden;
+}
+
+.right-scroll{
+    width: 356.69px;
+    height: 1400px;
+    animation: loop;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes loop{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+
+.right img{
+    object-fit: cover;
+    height: 200px;
+    width: 356.69px;
+}
+
+.right-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.right-inner h4{
+    text-align: center;
+}
+
+.right-inner a{
+    color: rgba(65, 63, 63, 0.5);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .12), 0 2px 3px 0 rgba(0, 0, 0, .22);
+    /* transition: .3s; */
+}
+
+.right-inner a:hover{
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .15), 0 0 5px rgba(0, 0, 0, .1);
+    /* transform: translateY(-4px); */
+}
+
+.right p{
+    font-size: 12px;
+    margin: 10px;
+}
+
+.right h4{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: rgba(240, 235, 235,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+.sns-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .logo{
+    margin: 10px auto;
+    font-size: 20px;
+}
+
+.footer-left h2{
+    color: transparent;
+}
+
+.icon{
+    display: inline-block;
+    font-size: 35px;
+    text-decoration: none;
+    transition: .5s;
+    color: #444;
+}
+
+footer p{
+    color: #444;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+
+.facebook{
+    margin: auto 20px;
+}
